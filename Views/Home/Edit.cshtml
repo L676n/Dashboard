@@ -1,0 +1,27 @@
+﻿@model Product;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Edit Page";
+}
+
+<body dir="rtl" id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+    <h1>تعديل بيانات المنتجات</h1>
+    <form asp-action="UpdateProducts" method="post">
+        <!--we added a hidden input so we can add the ID from model to the form so it can be connected to ID in the updateProducts Function-->
+        <input type="hidden" asp-for="@Model.Id">
+        <div class="row">
+            <div class="col-sm-12">
+                <label for="ProductName">اسم المنتج</label>
+                <input asp-for="@Model.ProductName" class="form-control" id="ProductName" name="ProductName" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-sm-center mt-4">
+                <button type="submit" class="btn btn-primary p-2">حفظ</button>
+            </div>
+        </div>
+    </form>
+</body>
+

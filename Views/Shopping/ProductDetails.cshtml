@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ProductDetails>
+<!--where uses ienumrable-->
+<!--single or defulte uses list-->
+@{
+    Layout = "~/Views/Shared/_LayoutShopping.cshtml";
+}
+
+<section style="background-color: lightskyblue;">
+    <div class="container py-5">
+        
+        <section class="vh-100" style="background-color: skyblue;">
+            <div class="container h-100">
+                @foreach(var item in Model)
+                {
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col">
+                        <p><span class="h2">تفاصيل المنتج  </span><span class="h4">(1 item in your cart)</span></p>
+
+                        <div class="card mb-4">
+                            <div class="card-body p-4">
+
+                                <div class="row align-items-center">
+                                    <div class="col-md-2">
+                                            <img src="~/assets/assets/Images/@item.Image" class="w-100 h-100" />
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center">
+                                        <div>
+                                            <p class="small text-muted mb-4 pb-2">Name</p>
+                                            <p class="lead fw-normal mb-0">@item.ProductName</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center">
+                                        <div>
+                                            <p class="small text-muted mb-4 pb-2">Color</p>
+                                            <p class="lead fw-normal mb-0">
+                                                <i class="fas fa-circle me-2" style="color: #fdd8d2;"></i>
+                                                @item.Color
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center">
+                                        <div>
+                                            <p class="small text-muted mb-4 pb-2">Price</p>
+                                            <p class="lead fw-normal mb-0">@item.Price</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center">
+                                        <div>
+                                            <p class="small text-muted mb-4 pb-2">Total</p>
+                                            <p class="lead fw-normal mb-0">@item.Price SAR</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-5">
+                            <div class="card-body p-4">
+
+                                <div class="float-end">
+                                    <p class="mb-0 me-5 d-flex align-items-center">
+                                        <span class="small text-muted me-2">Order total:</span> <span class="lead fw-normal">$799</span>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                                <a asp-action="Index" class="btn btn-light btn-lg me-2">مواصلة التسوق</a>
+                                <a asp-action="CheckOut" asp-route-id="@item.ProductId" class="btn btn-primary btn-lg">اضف للسلة</a>
+                        </div>
+
+                    </div>
+                </div>
+                }
+            </div>
+        </section>
+
+    </div>
+</section>
+

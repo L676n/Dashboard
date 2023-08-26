@@ -1,0 +1,334 @@
+﻿@model IEnumerable<Product>;
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Home Page";
+}
+
+<body dir="rtl" id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+
+
+
+	<div class="row ">
+		<div class="col-sm-2">
+			<div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
+				<!--begin::sidebar-->
+				<div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+					<!--begin::Logo-->
+					<div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
+						<!--begin::Logo image-->
+						<a href="../../demo1/dist/index.html">
+							<img alt="Logo" src="https://cdn-icons-png.flaticon.com/512/634/634394.png?w=740&t=st=1691009018~exp=1691009618~hmac=37c2afc6d1411a956f80ab79897617cc926d1dbf5748a08ec14df8377911311d" class="h-50px app-sidebar-logo-default" />
+							<img alt="Logo" src="https://cdn-icons-png.flaticon.com/512/634/634394.png?w=740&t=st=1691009018~exp=1691009618~hmac=37c2afc6d1411a956f80ab79897617cc926d1dbf5748a08ec14df8377911311d" class="h-50px app-sidebar-logo-minimize" />
+						</a>
+						<!--end::Logo image-->
+						<!--begin::Sidebar toggle-->
+						<div id="kt_app_sidebar_toggle" class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="app-sidebar-minimize">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
+							<span class="svg-icon svg-icon-2 rotate-180">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="currentColor" />
+									<path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="currentColor" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</div>
+						<!--end::Sidebar toggle-->
+					</div>
+					<!--end::Logo-->
+					<!--begin::sidebar menu-->
+					<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+						<!--begin::Menu wrapper-->
+						<div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+							<!--begin::Menu-->
+							<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
+								<!--begin:Menu item-->
+								<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
+									<!--begin:Menu link-->
+									<span class="menu-link">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+											<span class="svg-icon svg-icon-2">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor" />
+													<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor" />
+													<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor" />
+													<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">Dashboards</span>
+										<span class="menu-arrow"></span>
+									</span>
+									<!--end:Menu link-->
+									<!--begin:Menu sub-->
+									<div class="menu-sub menu-sub-accordion">
+										<!--begin:Menu item-->
+
+
+										<div class="menu-item">
+											<!--begin:Menu link-->
+											<a class="menu-link" asp-action="Index">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title" style="font-family:Cairo">المنتجات   </span>
+											</a>
+											<!--end:Menu link-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div class="menu-item">
+											<!--begin:Menu link-->
+											<a class="menu-link" asp-action="ProductDetails">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title" style="font-family:Cairo"> تفاصيل المنتجات </span>
+											</a>
+											<!--end:Menu link-->
+										</div>
+
+										<div class="menu-item">
+											<!--begin:Menu link-->
+											<a class="menu-link" asp-action="PaymentAccept">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title" style="font-family:Cairo"> بطاقات الدفع المعتمدة </span>
+											</a>
+											<!--end:Menu link-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div class="menu-item">
+											<!--begin:Menu link-->
+											<a class="menu-link" asp-action="Index">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title" style="font-family:Cairo">الزبائن </span>
+											</a>
+											<!--end:Menu link-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div class="menu-item">
+											<!--begin:Menu link-->
+											<a class="menu-link" href="../../demo1/dist/dashboards/marketing.html">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title" style="font-family:Cairo">الفواتير </span>
+											</a>
+											<!--end:Menu link-->
+										</div>
+										<!--end:Menu item-->
+
+									</div>
+									<!--end:Menu sub-->
+								</div>
+
+
+
+
+
+
+							</div>
+							<!--end::Menu-->
+						</div>
+						<!--end::Menu wrapper-->
+					</div>
+					<!--end::sidebar menu-->
+					<!--begin::Footer-->
+					<!--end::Footer-->
+				</div>
+				<!--end::sidebar-->
+				<!--begin::Main-->
+				<!--end:::Main-->
+			</div>
+		</div>
+
+		<div class="col-sm-10 bg-secondary ">
+			<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+				<!--begin::Content wrapper-->
+				<div class="d-flex flex-column flex-column-fluid">
+					<!--begin::Toolbar-->
+					<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+						<!--begin::Toolbar container-->
+						<!--end::Toolbar container-->
+					</div>
+					<!--end::Toolbar-->
+					<!--begin::Content-->
+					<div id="kt_app_content p-10" class="app-content flex-column-fluid">
+						<!--begin::Content container-->
+						<div id="kt_app_content_container p-5" class="app-container container-xxl">
+							<div class="card">
+								<!--begin::Card header-->
+								<div class="card-header border-0 pt-6">
+									<!--begin::Card title-->
+									<div class="card-title">
+										<!--begin::Search-->
+										<div class="row">
+											<div class="col-sm-12">
+												<form asp-action="Index" method="post">
+													<div class="row">
+														<div class="col-sm-6">
+															<div class="p-2">
+																<label for="ProdutName">بحث</label>
+																<input type="text" name="ProductName" />
+																<button class="btn btn-primary"><i class="fa fa-search"></i></button>
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<!--end::Search-->
+									</div>
+									<!--begin::Card title-->
+									<!--begin::Card toolbar-->
+									<div class="card-toolbar">
+										<!--begin::Toolbar-->
+										<div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
+											<!--begin::Filter-->
+											<div class="w-150px me-3">
+												<!--begin::Select2-->
+												<select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Status" data-kt-ecommerce-order-filter="status">
+													<option></option>
+													<option value="all">All</option>
+													<option value="active">Active</option>
+													<option value="locked">Locked</option>
+												</select>
+												<!--end::Select2-->
+											</div>
+											<!--end::Filter-->
+
+											<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> إضافة منتج جديد</button>
+											<!--end::Add customer-->
+										</div>
+										<!--end::Toolbar-->
+										<!--begin::Group actions-->
+										<div class="d-flex justify-content-end align-items-center d-none" data-kt-customer-table-toolbar="selected">
+											<div class="fw-bold me-5">
+												<span class="me-2" data-kt-customer-table-select="selected_count"></span>Selected
+											</div>
+											<button type="button" class="btn btn-danger" data-kt-customer-table-select="delete_selected">Delete Selected</button>
+										</div>
+										<!--end::Group actions-->
+									</div>
+									<!--end::Card toolbar-->
+								</div>
+								<!--end::Card header-->
+								<!--begin::Card body-->
+								<div class="card-body pt-0">
+									<h1>Hi @ViewBag.Name</h1>
+								</div>
+								<div class="card-body pt-0">
+									<!--begin::Table-->
+									<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+										<!--begin::Table head-->
+										<thead>
+											<!--begin::Table row-->
+											<tr class="text-center text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+											
+												<th class="min-w-125px " style="font-family:cairo">رقم المنتج </th>
+												<th class="min-w-125px " style="font-family:cairo"> اسم المنتج </th>
+												<th class="min-w-125px " style="font-family:cairo" colspan="2">إجراء </th>
+
+											</tr>
+											<!--end::Table row-->
+										</thead>
+										<!--end::Table head-->
+										<!--begin::Table body-->
+										<tbody class="fw-semibold text-gray-600 ">
+											
+											@if(Model != null)
+											{
+												@foreach (var item in Model)
+												{
+												<tr class="text-center">
+													<td>@item.Id</td>
+													<td>@item.ProductName</td>
+														<td><a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a></td>
+														<td><a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a></td>
+													
+												</tr>
+												}
+											}
+											
+
+
+
+										</tbody>
+										<!--end::Table body-->
+									</table>
+									<!--end::Table-->
+								</div>
+								<!--end::Card body-->
+							</div>
+
+
+							<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">إضافة منتج جديد</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<form asp-action="AddProduct" method="post">
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-sm-12">
+														<label for="ProductName">اسم المنتج</label>
+														<input type="text" id="ProductName" name="ProductName" class="form-control form-control-sm" />
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-sm-12">
+														<label for="Image"> الصورة</label>
+														<input type="text" id="Image" name="Image" class="form-control form-control-sm" />
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-sm-12">
+														<label for="Price"> السعر</label>
+														<input type="number" id="Price" name="Price" class="form-control form-control-sm" />
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+												<button type="submit" class="btn btn-primary">حفظ</button>
+											</div>
+										</form>
+
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						<!--end::Content container-->
+					</div>
+					<!--end::Content-->
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
