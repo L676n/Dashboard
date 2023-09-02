@@ -41,6 +41,7 @@ namespace Dashboard.Migrations.DashboardDb
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+<<<<<<< HEAD
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -49,6 +50,8 @@ namespace Dashboard.Migrations.DashboardDb
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+=======
+>>>>>>> 054a4bacd529ccc22a35d039283f75f5f735bba5
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 

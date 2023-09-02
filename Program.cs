@@ -28,9 +28,12 @@ internal class Program
 		builder.Services.AddDefaultIdentity<DashboardUser>(options => options.SignIn.RequireConfirmedAccount = true)
 	    .AddEntityFrameworkStores<DashboardDbContext>();
 		builder.Services.AddRazorPages();
+<<<<<<< HEAD
 
 		//must be added to use session
 		builder.Services.AddSession();
+=======
+>>>>>>> 054a4bacd529ccc22a35d039283f75f5f735bba5
 		var app = builder.Build();
 
 		// Configure the HTTP request pipeline.
@@ -47,6 +50,7 @@ internal class Program
         app.UseRouting();
 
         app.UseAuthorization();
+<<<<<<< HEAD
         //must be added to use session
         app.UseSession();
         app.MapControllerRoute(
@@ -56,6 +60,14 @@ internal class Program
         app.MapRazorPages();
         //used to trace the problem if there is one when excuting
         app.UseDeveloperExceptionPage();
+=======
+       
+        app.MapControllerRoute(
+            name: "default",
+            pattern: "{controller=Home}/{action=Index}/{id?}");
+
+        app.MapRazorPages();
+>>>>>>> 054a4bacd529ccc22a35d039283f75f5f735bba5
         app.Run();
     }
 }

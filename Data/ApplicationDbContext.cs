@@ -22,8 +22,12 @@ namespace Dashboard.Data
 
 		public DbSet<Invoice> Invoice { get; set; }
 
+<<<<<<< HEAD
         public DbSet<Cart> Cart { get; set; }
 
     }
+=======
+	}
+>>>>>>> 054a4bacd529ccc22a35d039283f75f5f735bba5
 }
 

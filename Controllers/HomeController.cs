@@ -20,6 +20,7 @@ namespace Dashboard.Controllers
 		[Authorize]
 		public IActionResult Index()
 		{
+<<<<<<< HEAD
 			var Name = HttpContext.User.Identity.Name;
 			//method 1 of state management
 			CookieOptions options = new CookieOptions();
@@ -31,10 +32,13 @@ namespace Dashboard.Controllers
 			//method 3 of state management
 			//TempData["Name"] = Name;
 			ViewBag.Name = Name;
+=======
+>>>>>>> 054a4bacd529ccc22a35d039283f75f5f735bba5
 			var product = context.Products.ToList();
 			return View(product);
 		}
 
+<<<<<<< HEAD
 		//used only to show the page
 		public IActionResult PaymentAccept()
 		{
@@ -54,6 +58,9 @@ namespace Dashboard.Controllers
 
 
         public IActionResult AddProduct(Product product)
+=======
+		public IActionResult AddProduct(Product product)
+>>>>>>> 054a4bacd529ccc22a35d039283f75f5f735bba5
         {
 			context.Products.Add(product);
 			context.SaveChanges();
@@ -85,6 +92,7 @@ namespace Dashboard.Controllers
 			var product = context.Products.ToList();
 			var ProductDetails = context.ProductDetails.ToList();
 			ViewBag.ProductDetails = ProductDetails;
+<<<<<<< HEAD
 			//method 1 of state management
 			ViewBag.Name = Request.Cookies["Name"];
 			//method2 of state management
@@ -92,6 +100,8 @@ namespace Dashboard.Controllers
 
 			//method 3 of state management
 			//ViewBag.Name = TempData["Name"];
+=======
+>>>>>>> 054a4bacd529ccc22a35d039283f75f5f735bba5
 			return View(product);
 		}
 

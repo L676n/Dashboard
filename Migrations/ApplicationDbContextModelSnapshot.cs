@@ -21,6 +21,7 @@ namespace Dashboard.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+<<<<<<< HEAD
             modelBuilder.Entity("Dashboard.Models.Cart", b =>
                 {
                     b.Property<int>("Id")
@@ -64,6 +65,8 @@ namespace Dashboard.Migrations
                     b.ToTable("Cart");
                 });
 
+=======
+>>>>>>> 054a4bacd529ccc22a35d039283f75f5f735bba5
             modelBuilder.Entity("Dashboard.Models.Customer", b =>
                 {
                     b.Property<int>("Id")
@@ -143,6 +146,7 @@ namespace Dashboard.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+<<<<<<< HEAD
                     b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -150,6 +154,8 @@ namespace Dashboard.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
+=======
+>>>>>>> 054a4bacd529ccc22a35d039283f75f5f735bba5
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
